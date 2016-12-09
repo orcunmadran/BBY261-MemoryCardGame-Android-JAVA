@@ -21,9 +21,18 @@ public class MainActivity extends AppCompatActivity {
     private ImageView cardImage11;
     private ImageView cardImage12;
     private int[] imageListAll;
-    private int clickCount = 0;
-    private int firstImage;
-    private int secondImage;
+    private int cardStatus1 = 0;
+    private int cardStatus2 = 0;
+    private int cardStatus3 = 0;
+    private int cardStatus4 = 0;
+    private int cardStatus5 = 0;
+    private int cardStatus6 = 0;
+    private int cardStatus7 = 0;
+    private int cardStatus8 = 0;
+    private int cardStatus9 = 0;
+    private int cardStatus10 = 0;
+    private int cardStatus11 = 0;
+    private int cardStatus12 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,50 +57,26 @@ public class MainActivity extends AppCompatActivity {
         cardImage1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (clickCount){
-                    case 0:
-                        clickCount++;
-                        firstImage = 0;
-                        cardImage1.setImageResource(imageListAll[0]);
-                        break;
-                    case 1:
-                        clickCount++;
-                        secondImage = 0;
-                        cardImage1.setImageResource(imageListAll[0]);
-                        break;
-                    case 2:
-                        clickCount=0;
-                        if(firstImage == secondImage){
-                            cardImage1.setImageResource(imageListAll[0]);
-                        } else{
-                            cardImage1.setImageResource(R.drawable.image_main);
-                        }
+                if(cardStatus1 == 0){
+                    cardImage1.setImageResource(imageListAll[0]);
+                    cardStatus1 = 1;
+                } else {
+                    cardImage1.setImageResource(R.drawable.image_main);
+                    cardStatus1 = 0;
                 }
+
             }
         });
 
         cardImage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                switch (clickCount){
-                    case 0:
-                        clickCount++;
-                        firstImage = 1;
-                        cardImage2.setImageResource(imageListAll[1]);
-                        break;
-                    case 1:
-                        clickCount++;
-                        secondImage = 1;
-                        cardImage2.setImageResource(imageListAll[1]);
-                        break;
-                    case 2:
-                        clickCount=0;
-                        if(firstImage == secondImage){
-                            cardImage2.setImageResource(imageListAll[1]);
-                        } else{
-                            cardImage2.setImageResource(R.drawable.image_main);
-                        }
+                if(cardStatus2 == 0){
+                    cardImage2.setImageResource(imageListAll[1]);
+                    cardStatus2 = 1;
+                } else {
+                    cardImage2.setImageResource(R.drawable.image_main);
+                    cardStatus2 = 0;
                 }
             }
         });
@@ -99,70 +84,130 @@ public class MainActivity extends AppCompatActivity {
         cardImage3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cardImage3.setImageResource(imageListAll[3]);
+                if(cardStatus3 == 0){
+                    cardImage3.setImageResource(imageListAll[3]);
+                    cardStatus3 = 1;
+                } else {
+                    cardImage3.setImageResource(R.drawable.image_main);
+                    cardStatus3 = 0;
+                }
             }
         });
 
         cardImage4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cardImage4.setImageResource(imageListAll[2]);
+                if(cardStatus4 == 0){
+                    cardImage4.setImageResource(imageListAll[2]);
+                    cardStatus4 = 1;
+                } else {
+                    cardImage4.setImageResource(R.drawable.image_main);
+                    cardStatus4 = 0;
+                }
             }
         });
 
         cardImage5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cardImage5.setImageResource(imageListAll[0]);
+                if(cardStatus5 == 0){
+                    cardImage5.setImageResource(imageListAll[0]);
+                    cardStatus5 = 1;
+                } else {
+                    cardImage5.setImageResource(R.drawable.image_main);
+                    cardStatus5 = 0;
+                }
             }
         });
 
         cardImage6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cardImage6.setImageResource(imageListAll[5]);
+                if(cardStatus6 == 0){
+                    cardImage6.setImageResource(imageListAll[5]);
+                    cardStatus6 = 1;
+                } else {
+                    cardImage6.setImageResource(R.drawable.image_main);
+                    cardStatus6 = 0;
+                }
             }
         });
 
         cardImage7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cardImage7.setImageResource(imageListAll[2]);
+                if(cardStatus7 == 0){
+                    cardImage7.setImageResource(imageListAll[2]);
+                    cardStatus7 = 1;
+                } else {
+                    cardImage7.setImageResource(R.drawable.image_main);
+                    cardStatus7 = 0;
+                }
             }
         });
 
         cardImage8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cardImage8.setImageResource(imageListAll[4]);
+                if(cardStatus8 == 0){
+                    cardImage8.setImageResource(imageListAll[4]);
+                    cardStatus8 = 1;
+                } else {
+                    cardImage8.setImageResource(R.drawable.image_main);
+                    cardStatus8 = 0;
+                }
             }
         });
 
         cardImage9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cardImage9.setImageResource(imageListAll[5]);
+                if(cardStatus9 == 0){
+                    cardImage9.setImageResource(imageListAll[5]);
+                    cardStatus9 = 1;
+                } else {
+                    cardImage9.setImageResource(R.drawable.image_main);
+                    cardStatus9 = 0;
+                }
             }
         });
 
         cardImage10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cardImage10.setImageResource(imageListAll[4]);
+                if(cardStatus10 == 0){
+                    cardImage10.setImageResource(imageListAll[4]);
+                    cardStatus10 = 1;
+                } else {
+                    cardImage10.setImageResource(R.drawable.image_main);
+                    cardStatus10 = 0;
+                }
             }
         });
 
         cardImage11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cardImage11.setImageResource(imageListAll[3]);
+                if(cardStatus11 == 0){
+                    cardImage11.setImageResource(imageListAll[3]);
+                    cardStatus11 = 1;
+                } else {
+                    cardImage11.setImageResource(R.drawable.image_main);
+                    cardStatus11 = 0;
+                }
             }
         });
 
         cardImage12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cardImage12.setImageResource(imageListAll[1]);
+                if(cardStatus12 == 0){
+                    cardImage12.setImageResource(imageListAll[1]);
+                    cardStatus12 = 1;
+                } else {
+                    cardImage12.setImageResource(R.drawable.image_main);
+                    cardStatus12 = 0;
+                }
             }
         });
     }
