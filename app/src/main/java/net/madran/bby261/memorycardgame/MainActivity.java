@@ -1,5 +1,6 @@
 package net.madran.bby261.memorycardgame;
 
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
     private ImageView cardImage10;
     private ImageView cardImage11;
     private ImageView cardImage12;
+
     private int[] imageListAll;
+
     private int cardStatus1 = 0;
     private int cardStatus2 = 0;
     private int cardStatus3 = 0;
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     private int cardStatus10 = 0;
     private int cardStatus11 = 0;
     private int cardStatus12 = 0;
+
+    private int clickCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
                     cardImage1.setImageResource(R.drawable.image_main);
                     cardStatus1 = 0;
                 }
-
             }
         });
 
