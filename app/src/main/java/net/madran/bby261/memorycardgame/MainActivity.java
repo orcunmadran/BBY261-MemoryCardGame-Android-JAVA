@@ -1,14 +1,13 @@
 package net.madran.bby261.memorycardgame;
 
-import android.content.Context;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView cardImage12;
 
     private int[] imageListAll;
+    private int[] imageListGame;
+    private int randomNumber;
 
     private int cardStatus1 = 0;
     private int cardStatus2 = 0;
@@ -49,7 +50,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        imageListAll = new int[] {R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4, R.drawable.image5, R.drawable.image6};
+        imageListAll = new int[] {R.drawable.image1, R.drawable.image1, R.drawable.image2, R.drawable.image2, R.drawable.image3, R.drawable.image3, R.drawable.image4, R.drawable.image4, R.drawable.image5, R.drawable.image5, R.drawable.image6, R.drawable.image6};
+
+        imageListGame = new int[12];
 
         buttonReDeal = (Button) findViewById(R.id.reDeal);
 
@@ -70,7 +73,18 @@ public class MainActivity extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                Toast.makeText(MainActivity.this, "Kağıtlar yeniden dağıtıldı!", Toast.LENGTH_SHORT).show();
+                Random randomNumberS = new Random();
+                randomNumber = randomNumberS.nextInt(12);
+                System.out.println(imageListAll.length);
+                System.out.println(randomNumber);
+                /*
+                for(int i=0; i<imageListAll.length; i++){
+                    randomNumber = randomNumberS.nextInt(12);
+                    System.out.println(randomNumber);
+                    //System.out.println(randomNumber);
+                    //Toast.makeText(MainActivity.this, "Kartlar yeniden dağıtıldı", Toast.LENGTH_SHORT).show();
+                }
+                */
             }
         });
 
