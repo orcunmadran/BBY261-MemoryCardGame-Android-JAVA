@@ -1,5 +1,6 @@
 package net.madran.bby261.memorycardgame;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -51,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         imageListGame = new int[12];
 
         buttonReDeal = (Button) findViewById(R.id.reDeal);
+        buttonReDeal.setBackgroundColor(Color.parseColor("#005000"));
+        buttonReDeal.setTextColor(Color.WHITE);
+
 
         cardImage1 = (ImageView) findViewById(R.id.imageView1);
         cardImage2 = (ImageView) findViewById(R.id.imageView2);
@@ -146,6 +150,9 @@ public class MainActivity extends AppCompatActivity {
                         i--;
                     }
                 }
+
+                buttonReDeal.setText("Kartları Yeniden Dağıt..!");
+
             }
                     //System.out.println(randomNumber);
         });
