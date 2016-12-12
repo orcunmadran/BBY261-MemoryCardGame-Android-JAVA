@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private int[] imageListAll;
     private int[] imageListGame;
     private int randomNumber;
+    private int rotationValue;
 
     private int cardStatus1 = 0;
     private int cardStatus2 = 0;
@@ -80,6 +81,44 @@ public class MainActivity extends AppCompatActivity {
                 cardImage10.setImageResource(R.drawable.image_main);
                 cardImage11.setImageResource(R.drawable.image_main);
                 cardImage12.setImageResource(R.drawable.image_main);
+
+                Random rotation = new Random();
+
+                rotationValue = rotation.nextInt(8)-5;
+                cardImage1.setRotation(rotationValue);
+
+                rotationValue = rotation.nextInt(10)-5;
+                cardImage2.setRotation(rotationValue);
+
+                rotationValue = rotation.nextInt(11)-6;
+                cardImage3.setRotation(rotationValue);
+
+                rotationValue = rotation.nextInt(9)-5;
+                cardImage4.setRotation(rotationValue);
+
+                rotationValue = rotation.nextInt(11)-5;
+                cardImage5.setRotation(rotationValue);
+
+                rotationValue = rotation.nextInt(10)-5;
+                cardImage6.setRotation(rotationValue);
+
+                rotationValue = rotation.nextInt(8)-3;
+                cardImage7.setRotation(rotationValue);
+
+                rotationValue = rotation.nextInt(10)-5;
+                cardImage8.setRotation(rotationValue);
+
+                rotationValue = rotation.nextInt(7)-2;
+                cardImage9.setRotation(rotationValue);
+
+                rotationValue = rotation.nextInt(10)-5;
+                cardImage10.setRotation(rotationValue);
+
+                rotationValue = rotation.nextInt(6)-1;
+                cardImage11.setRotation(rotationValue);
+
+                rotationValue = rotation.nextInt(10)-5;
+                cardImage12.setRotation(rotationValue);
 
                 cardStatus1 = 0;
                 cardStatus2 = 0;
