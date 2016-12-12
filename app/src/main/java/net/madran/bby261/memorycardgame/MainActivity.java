@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import java.util.Random;
 
@@ -43,14 +42,10 @@ public class MainActivity extends AppCompatActivity {
     private int cardStatus11 = 0;
     private int cardStatus12 = 0;
 
-    private int clickCount = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        imageListAll = new int[] {R.drawable.image1, R.drawable.image1, R.drawable.image2, R.drawable.image2, R.drawable.image3, R.drawable.image3, R.drawable.image4, R.drawable.image4, R.drawable.image5, R.drawable.image5, R.drawable.image6, R.drawable.image6};
 
         imageListGame = new int[12];
 
@@ -73,26 +68,54 @@ public class MainActivity extends AppCompatActivity {
         {
             public void onClick(View v)
             {
+                cardImage1.setImageResource(R.drawable.image_main);
+                cardImage2.setImageResource(R.drawable.image_main);
+                cardImage3.setImageResource(R.drawable.image_main);
+                cardImage4.setImageResource(R.drawable.image_main);
+                cardImage5.setImageResource(R.drawable.image_main);
+                cardImage6.setImageResource(R.drawable.image_main);
+                cardImage7.setImageResource(R.drawable.image_main);
+                cardImage8.setImageResource(R.drawable.image_main);
+                cardImage9.setImageResource(R.drawable.image_main);
+                cardImage10.setImageResource(R.drawable.image_main);
+                cardImage11.setImageResource(R.drawable.image_main);
+                cardImage12.setImageResource(R.drawable.image_main);
+
+                cardStatus1 = 0;
+                cardStatus2 = 0;
+                cardStatus3 = 0;
+                cardStatus4 = 0;
+                cardStatus5 = 0;
+                cardStatus6 = 0;
+                cardStatus7 = 0;
+                cardStatus8 = 0;
+                cardStatus9 = 0;
+                cardStatus10 = 0;
+                cardStatus11 = 0;
+                cardStatus12 = 0;
+
+                imageListAll = new int[] {R.drawable.image1, R.drawable.image1, R.drawable.image2, R.drawable.image2, R.drawable.image3, R.drawable.image3, R.drawable.image4, R.drawable.image4, R.drawable.image5, R.drawable.image5, R.drawable.image6, R.drawable.image6};
+
                 Random randomNumberS = new Random();
-                randomNumber = randomNumberS.nextInt(12);
-                System.out.println(imageListAll.length);
-                System.out.println(randomNumber);
-                /*
+
                 for(int i=0; i<imageListAll.length; i++){
                     randomNumber = randomNumberS.nextInt(12);
-                    System.out.println(randomNumber);
-                    //System.out.println(randomNumber);
-                    //Toast.makeText(MainActivity.this, "Kartlar yeniden dağıtıldı", Toast.LENGTH_SHORT).show();
+                    if(imageListAll[randomNumber] != 0){
+                        imageListGame[i] = imageListAll[randomNumber];
+                        imageListAll[randomNumber] = 0;
+                    } else {
+                        i--;
+                    }
                 }
-                */
             }
+                    //System.out.println(randomNumber);
         });
 
         cardImage1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(cardStatus1 == 0){
-                    cardImage1.setImageResource(imageListAll[0]);
+                    cardImage1.setImageResource(imageListGame[0]);
                     cardStatus1 = 1;
                 } else {
                     cardImage1.setImageResource(R.drawable.image_main);
@@ -105,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cardStatus2 == 0){
-                    cardImage2.setImageResource(imageListAll[1]);
+                    cardImage2.setImageResource(imageListGame[1]);
                     cardStatus2 = 1;
                 } else {
                     cardImage2.setImageResource(R.drawable.image_main);
@@ -118,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cardStatus3 == 0){
-                    cardImage3.setImageResource(imageListAll[3]);
+                    cardImage3.setImageResource(imageListGame[2]);
                     cardStatus3 = 1;
                 } else {
                     cardImage3.setImageResource(R.drawable.image_main);
@@ -131,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cardStatus4 == 0){
-                    cardImage4.setImageResource(imageListAll[2]);
+                    cardImage4.setImageResource(imageListGame[3]);
                     cardStatus4 = 1;
                 } else {
                     cardImage4.setImageResource(R.drawable.image_main);
@@ -144,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cardStatus5 == 0){
-                    cardImage5.setImageResource(imageListAll[0]);
+                    cardImage5.setImageResource(imageListGame[4]);
                     cardStatus5 = 1;
                 } else {
                     cardImage5.setImageResource(R.drawable.image_main);
@@ -157,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cardStatus6 == 0){
-                    cardImage6.setImageResource(imageListAll[5]);
+                    cardImage6.setImageResource(imageListGame[5]);
                     cardStatus6 = 1;
                 } else {
                     cardImage6.setImageResource(R.drawable.image_main);
@@ -170,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cardStatus7 == 0){
-                    cardImage7.setImageResource(imageListAll[2]);
+                    cardImage7.setImageResource(imageListGame[6]);
                     cardStatus7 = 1;
                 } else {
                     cardImage7.setImageResource(R.drawable.image_main);
@@ -183,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cardStatus8 == 0){
-                    cardImage8.setImageResource(imageListAll[4]);
+                    cardImage8.setImageResource(imageListGame[7]);
                     cardStatus8 = 1;
                 } else {
                     cardImage8.setImageResource(R.drawable.image_main);
@@ -196,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cardStatus9 == 0){
-                    cardImage9.setImageResource(imageListAll[5]);
+                    cardImage9.setImageResource(imageListGame[8]);
                     cardStatus9 = 1;
                 } else {
                     cardImage9.setImageResource(R.drawable.image_main);
@@ -209,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cardStatus10 == 0){
-                    cardImage10.setImageResource(imageListAll[4]);
+                    cardImage10.setImageResource(imageListGame[9]);
                     cardStatus10 = 1;
                 } else {
                     cardImage10.setImageResource(R.drawable.image_main);
@@ -222,7 +245,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cardStatus11 == 0){
-                    cardImage11.setImageResource(imageListAll[3]);
+                    cardImage11.setImageResource(imageListGame[10]);
                     cardStatus11 = 1;
                 } else {
                     cardImage11.setImageResource(R.drawable.image_main);
@@ -235,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cardStatus12 == 0){
-                    cardImage12.setImageResource(imageListAll[1]);
+                    cardImage12.setImageResource(imageListGame[11]);
                     cardStatus12 = 1;
                 } else {
                     cardImage12.setImageResource(R.drawable.image_main);
