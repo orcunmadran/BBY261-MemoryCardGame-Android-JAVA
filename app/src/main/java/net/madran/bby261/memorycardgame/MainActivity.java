@@ -1,13 +1,18 @@
 package net.madran.bby261.memorycardgame;
 
+import android.content.Context;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button buttonReDeal;
 
     private ImageView cardImage1;
     private ImageView cardImage2;
@@ -46,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
         imageListAll = new int[] {R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4, R.drawable.image5, R.drawable.image6};
 
+        buttonReDeal = (Button) findViewById(R.id.reDeal);
+
         cardImage1 = (ImageView) findViewById(R.id.imageView1);
         cardImage2 = (ImageView) findViewById(R.id.imageView2);
         cardImage3 = (ImageView) findViewById(R.id.imageView3);
@@ -58,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
         cardImage10 = (ImageView) findViewById(R.id.imageView10);
         cardImage11 = (ImageView) findViewById(R.id.imageView11);
         cardImage12 = (ImageView) findViewById(R.id.imageView12);
+
+        buttonReDeal.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                Toast.makeText(MainActivity.this, "Kağıtlar yeniden dağıtıldı!", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         cardImage1.setOnClickListener(new View.OnClickListener() {
             @Override
